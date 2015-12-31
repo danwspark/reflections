@@ -1,0 +1,57 @@
+Learned how to spot differences between code
+2 options. manually. this is a hassle
+better option is to use the diff command on unix
+	diff <file1> <file2>
+
+differences are pointed out in the command prompt. not useful
+when the differences/files are very long
+
+---
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    the computer pointed out the differences
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    this will help keep track of the changes made, and will help
+    me understand my own thought processes when I look back in
+    the future.
+
+    Also, keep track of changes made in the past, as to not repeat functionalities, or mistakes
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pro: can set own milestones; distinct phases of development
+    Con: can forget; also can't account for catastrophic hardware failure.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git repository (repo) are multiple files that are updated together.
+    They benefit from being updated together in phases, as some
+    files may communicate/affect eachother. Changes logged simultaneously would be beneficial
+    Google Docs works on files individually. There is no easy way to differentiate changes made between multiple files that are one logical unit change
+
+How can you use the commands git log and git diff to view the history of files?
+
+	git log shows the log of changes made
+	git diff acts the same way
+		git diff <id1> <id2>
+		where id are the hex numbers
+	and shows the differences between two versions
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    We can commit before making big changes (like a system restore) and then try the change. if it breaks, we can restore from a previous point
+    	git log --stat
+    	this gives more details about what changed
+
+    The git checkout feature makes it possible to make major changes, and then if something breaks, it is possible to revert to earlier versions of code without that problem.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+    I want to be a better Git user at school.. try and implement a linux system on my laptop and run it on xcfe or something
