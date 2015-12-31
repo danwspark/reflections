@@ -14,7 +14,7 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 		git diff
-			with no commit ids will compare between working direcory and staging area codes
+			with no commit id arguments will compare between working direcory and staging area codes
 		
 		git diff --staged
 			compare between stage and most recent commit
@@ -23,9 +23,15 @@ change?
 			discard changes in working directory or staging area
 			will destroy all changes
 		
+		git checkout master
+			get back to head status
+			
+	Staging area allows one commit to have one logical change among multiple files that could be changed. many files could be changed, but selected changes can be grouped together
+
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+
 
 How do the diagrams help you visualize the branch structure?
 
