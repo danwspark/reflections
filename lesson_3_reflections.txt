@@ -17,7 +17,7 @@ https://help.github.com/articles/caching-your-github-password-in-git/
  
     	git push --set-upstream origin master
     		To push the current branch and set the remote as upstream
-    		
+
 When would you want to use a remote repository rather than keeping all your work local?
 
     Sharing work is easier. Easier to work on same work away from home computers. 
@@ -30,10 +30,18 @@ Why might you want to always pull changes manually rather than having Git automa
 Describe the differences between forks, clones, and branches.  When would you use one instead of another?
 	
 	Forks is a clone made on the github servers. More features: keep track of number of people who have made forks. Easier to suggest changes to the original
+
+		click fork on the github page. cloning process is identical
+
     
     Branches happen inside a single repo
 
     clone: can be remote or local. make an exact copy of an existing repo
+
+    Use forks to get code from existing repos on Github. Clone to share repos from github that you want to edit, whether by yourself or with others. Branches used when making changes on existing repos.
+
+    	go to settings on repo page settings -> collaborators
+
 
 What is the benefit of having a copy of the last known state of the remote stored locally?
 
