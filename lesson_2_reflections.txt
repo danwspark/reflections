@@ -25,18 +25,67 @@ change?
 		
 		git checkout master
 			get back to head status
-			
+
 	Staging area allows one commit to have one logical change among multiple files that could be changed. many files could be changed, but selected changes can be grouped together
 
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+		git branch
+			shows current branches. star shows currently checked out branch
+
+		git branch <argument>
+			creates new branch with this name
+			check out the new branch to select
 
 How do the diagrams help you visualize the branch structure?
+	
+	Diagrams help us understand reachability, and the mapping of the branches themselves.
+
+	git log --graph
+	or 
+	git log --graph --oneline <branch> <branch>
+		graphically displays git branches
+		<branch> optional
+
+	git checkout -b <new_branch_name>
+		when detached HEAD state, and want to create new commits (so create new changes from an old version of code), and then decide to keep this code, run this command
+
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
+	
+	The code is updated with the changes of the merged branches, whether that is addition, or deletion. 
+	The diagram representation is accurate, as they are almost like streams that are split, then melded together later
+		git merge <branch1> <branch2>
+			merge!
+			will automatically include checked out branch. So If i am checked out on branch0, the command above will merge branch0, 1 &2
+			order of branch named des not matter
+
+
+		git show <commit ID>
+			comparison with a commit vs its parent
+
+		git branch -d coins
+			Delete branch label
+
+	If merge conflict occurs, restore files to state before merge by running
+		git merge --abort
+
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+	
+	Pro: simple for most cases; allows automation and interaction between remote writers. Fewer human based errors
+
+	Con: manual would not lead to any merge conflicts. 
+
+		the <<<<< sections reveal the changes made by versions
+		the  section anfter |||, before === are what was original that was changed by both branches
+		The bottom >>>>> is the bottom limit of the conflict
+
+		These special lines must be removed; also remove the corresponding section's code
+
+		git log -n <some numnber #>
+			show "number #" of entries
