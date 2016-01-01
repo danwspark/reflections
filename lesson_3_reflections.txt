@@ -10,20 +10,30 @@ https://help.github.com/articles/caching-your-github-password-in-git/
 		git remote add <name> <url>
 			add a repo & name it. origin is typically the standard name
 
-		git push <remote to send to> <name of local branch to push>
+		git clone <url> 
+			automatically sets up the remotes.
 
+		git push <remote to send to> <name of local branch to push>
+ 
+    	git push --set-upstream origin master
+    		To push the current branch and set the remote as upstream
+    		
 When would you want to use a remote repository rather than keeping all your work local?
 
     Sharing work is easier. Easier to work on same work away from home computers. 
 
 Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
+	
 
     similar reasons as before. Major changes & logical development steps should be left to the discretion of the user. 
 
 Describe the differences between forks, clones, and branches.  When would you use one instead of another?
 	
 	Forks is a clone made on the github servers. More features: keep track of number of people who have made forks. Easier to suggest changes to the original
-    Fill in your answer here
+    
+    Branches happen inside a single repo
+
+    clone: can be remote or local. make an exact copy of an existing repo
 
 What is the benefit of having a copy of the last known state of the remote stored locally?
 
