@@ -85,3 +85,30 @@ When would you want to make changes in a separate branch rather than directly in
     	-Fix the problem on the local branch
     	-Merge master into local branch (NOT just merge branch into master and push)
     	-push this change to github pull request
+
+
+Solve merge conflicts in pull request:
+	Situation: 
+	-Fork project, then clone to local
+	-on local make change, push to fork, make pull request. but bad; merge conflict. maybe someone else made changes while you were away?
+
+	Solution:
+	-Get new master from project into local machine. Do via new remote. Most call this remote 'upstream'. Pull the most-up to date master.
+		-This pull will create a "upstream/master" branch on local
+	-merge local change branch with upstream master
+	-push local master and change branch to fork (local master doesn't HAVE to be pushed)
+	
+
+Further Documentation
+http://git-scm.com/doc
+--the external links are really good
+
+http://git-scm.com/docs/gittutorial
+--git provided tutorials
+
+--good tutorials
+http://www-cs-students.stanford.edu/~blynn/gitmagic/index.html
+http://rypress.com/tutorials/git/index
+
+Todo: 
+go back, learn to read man pages
