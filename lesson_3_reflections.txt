@@ -44,13 +44,44 @@ Describe the differences between forks, clones, and branches.  When would you us
 
 
 What is the benefit of having a copy of the last known state of the remote stored locally?
+	
+	Benefit is being able to compare between remote and current, and using this to determine whether fast merge is possible.
 
-    Fill in your answer here
+		When git pushes/pulls, a local copy of the last known position of remotes' ('s) branches. 
+
+		git fetch <remote name>
+			gets a copy of the remote's commits, but leaves the local copy alone. does not try merge
+			Actually, git pull is this: a fetch then merge.
+
+		git log origin/master --AKA git log <remote>/<branch>
+			after fetching, this will examine the log of just the fetched branch
+
+		git diff origin/master master 
+			see explanation above
+
+    
 
 How would you collaborate without using Git or GitHub?  What would be easier, and what would be harder?
+		
+	without? use email to send code over. trial and error to find changes.
+	Probably won't be easier in any way.. harder bc can't see differences at all lol
 
-    Fill in your answer here
+		To collaborate: Make a branch of experimental change on local machine, then push to github. This ensures master isn't broken. Use pull request to collaborate
+    
 
 When would you want to make changes in a separate branch rather than directly in master?  What benefits does each approach have?
 
-    Fill in your answer here
+   -Branch better when the change is experimental, and has potential to break master
+   -When collaborating with many other people in professional environments when code review is imporant
+   -more eyes looking at code means less room for error
+
+   -Directly to master is better when the change is small, with few people collaborating where changes made can be directly and easily communicated with.
+   -is faster
+
+    	one way to fix merge conflicts between pull requests:
+    	merge one first if it works. close. This creates a seperate commit: no fast forward merges here.    	
+    	got to the one with conflict, change in the computer.
+    	-First pull the new master to local computer
+    	-Fix the problem on the local branch
+    	-Merge master into local branch (NOT just merge branch into master and push)
+    	-push this change to github pull request
